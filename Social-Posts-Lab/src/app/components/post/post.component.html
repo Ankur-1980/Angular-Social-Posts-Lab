@@ -1,11 +1,13 @@
-<li *ngFor="let object of post">
-  <div class="post-article">
-    <h3 class="post-title">{{ object.postTitle }}</h3>
-    <p class="post-content">{{ object.postContent }}</p>
-  </div>
+<section class="posts">
+  <li *ngFor="let object of post">
+    <div class="post-article">
+      <h3 class="post-title">{{ object.postTitle }}</h3>
+      <p class="post-content">{{ object.postContent }}</p>
+    </div>
 
-  <i class="material-icons btn-small">delete_forever</i>
-</li>
+    <i class="material-icons btn-small">delete_forever</i>
+  </li>
+</section>
 
 <!-- <div class="votes">
   <i class="material-icons btn-small" (click)="upVote()">thumb_up</i>
