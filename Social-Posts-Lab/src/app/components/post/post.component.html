@@ -1,12 +1,11 @@
-<section class="posts">
-  <li>
-    <div class="post-article">
-      <h3 class="post-title">{{ post.postTitle }}</h3>
-      <p class="post-content">{{ post.postContent }}</p>
-    </div>
-
-    <i class="material-icons btn-small">delete_forever</i>
-  </li>
+<section>
+  <div class="post-article">
+    <h3 class="post-title">{{ post.postTitle }}</h3>
+    <span class="post-content">{{ post.postContent }}</span>
+  </div>
+  <i class="material-icons btn-small" (click)="deletePost(post)"
+    >delete_forever</i
+  >
 </section>
 
 <!-- <div class="votes">

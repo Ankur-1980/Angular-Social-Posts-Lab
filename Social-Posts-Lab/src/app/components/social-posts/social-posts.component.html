@@ -3,6 +3,11 @@
   <h1>My Thoughts</h1>
   <button class="btn" id="new-thought">New Thought</button>
   <section class="posts">
-    <app-post *ngFor="let object of posts" [post]="object"> </app-post>
+    <app-post
+      *ngFor="let object of posts"
+      [post]="object"
+      (deleted)="deleted($event)"
+    >
+    </app-post>
   </section>
 </section>
