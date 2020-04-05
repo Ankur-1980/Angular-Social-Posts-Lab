@@ -1,0 +1,34 @@
+li {
+  list-style: none;
+  display: flex;
+  border: 1px black solid;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-article {
+  justify-self: left;
+  flex: 8;
+}
+
+.post-title {
+  font-size: 1.5rem;
+}
+
+.votes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.btn-small {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.vote-display {
+  padding: 5px 10px;
+}
