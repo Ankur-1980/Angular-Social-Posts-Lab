@@ -19,4 +19,8 @@ export class SocialPostsComponent implements OnInit {
   deleted(post: Post) {
     this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
   }
+
+  submitted(post) {
+    this.posts.push(post);
+  }
 }

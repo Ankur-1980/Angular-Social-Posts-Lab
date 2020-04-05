@@ -14,11 +14,14 @@ export class PostFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
   submitPost() {
     const post = {
       postTitle: this.title,
       postContent: this.content,
     };
+    this.title = '';
+    this.content = '';
     this.submitted.emit(post);
   }
 }
