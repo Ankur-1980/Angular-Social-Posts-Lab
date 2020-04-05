@@ -10,6 +10,13 @@ h1 {
   width: 80vw;
 }
 
+.posts {
+  padding: 1rem 2rem;
+  border: 1px black solid;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
 #new-thought {
   font-size: 1.5rem;
   margin-bottom: 1rem;

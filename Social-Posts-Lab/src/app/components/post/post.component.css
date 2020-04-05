@@ -7,13 +7,6 @@ li {
   background-color: #fff;
 }
 
-.posts {
-  padding: 1rem 2rem;
-  border: 1px black solid;
-  border-radius: 10px;
-  background-color: #fff;
-}
-
 .post-article {
   justify-self: left;
   flex: 8;
