@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from 'src/app/interfaces/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-social-posts',
@@ -9,25 +10,13 @@ import { Post } from 'src/app/interfaces/post';
 export class SocialPostsComponent implements OnInit {
   posts: Post[];
   votes = 0;
-  constructor() {}
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.posts = [
-      {
-        postTitle: 'Grand Circus',
-        postContent: 'Grand Circus is cool',
-        votes: this.votes,
-      },
-      {
-        postTitle: 'Ritual',
-        postContent: 'Ritual is a well developed app',
-        votes: this.votes,
-      },
-      {
-        postTitle: 'Scott',
-        postContent: 'Scott rides scooters',
-        votes: this.votes,
-      },
-    ];
+    this.posts = this.postService.getPosts();
+  }
+
+  deleted(post: Post) {
+    this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
   }
 }
