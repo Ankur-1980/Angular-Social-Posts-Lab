@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Dosis|Homemade+Apple&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f1f7;
+  font-family: "Dosis", sans-serif;
+}
+
+/* font-family: 'Homemade Apple', cursive;
+font-family: 'Dosis', sans-serif; */
