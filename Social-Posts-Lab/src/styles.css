@@ -6,6 +6,10 @@
   border: 0;
 }
 
+h2 {
+  margin-bottom: 10px;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -13,6 +17,7 @@ body {
   height: 100vh;
   background-color: #f3f1f7;
   font-family: "Dosis", sans-serif;
+  height: 100%;
 }
 
 .btn {
@@ -20,6 +25,8 @@ body {
   width: 100%;
   padding: 10px 0;
   border-radius: 10px;
+  background-color: #f3f1f7;
+  font-family: "Dosis", sans-serif;
 }
 
 /* font-family: 'Homemade Apple', cursive;
