@@ -3,6 +3,7 @@ import { Post } from 'src/app/interfaces/post';
 import { PostService } from 'src/app/services/post.service';
 import { MatDialog } from '@angular/material/dialog/';
 import { PostFormComponent } from '../post-form/post-form.component';
+import { NewModalComponent } from '../new-modal/new-modal.component';
 
 @Component({
   selector: 'app-social-posts',
@@ -19,7 +20,7 @@ export class SocialPostsComponent implements OnInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(PostFormComponent, {});
+    const dialogRef = this.dialog.open(NewModalComponent, { width: '50%' });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
