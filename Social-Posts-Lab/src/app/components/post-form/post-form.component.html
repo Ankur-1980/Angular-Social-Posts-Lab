@@ -1,20 +1,24 @@
 <section class="post-form">
   <form (ngSubmit)="submitPost()">
-    <h2>Title</h2>
-    <input
-      type="text"
-      placeholder="Whatcha thinking about?"
-      name="title"
-      [(ngModel)]="title"
-    />
-    <h2>Thought</h2>
-    <textarea
-      name="content"
-      [(ngModel)]="content"
-      cols="30"
-      rows="10"
-      placeholder="Expound on that thought here"
-    ></textarea>
-    <input type="submit" value="Add Post" class="btn" />
+    <mat-dialog-content>
+      <h2>Title</h2>
+      <input
+        type="text"
+        placeholder="Whatcha thinking about?"
+        name="title"
+        [(ngModel)]="title"
+      />
+      <h2>Thought</h2>
+      <textarea
+        name="content"
+        [(ngModel)]="content"
+        cols="30"
+        rows="10"
+        placeholder="Expound on that thought here"
+      ></textarea>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <input type="submit" value="Add Post" class="btn" />
+    </mat-dialog-actions>
   </form>
 </section>

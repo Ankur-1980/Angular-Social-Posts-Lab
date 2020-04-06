@@ -1,13 +1,15 @@
 <section class="container">
   <h1>My Thoughts</h1>
-  <button class="btn" id="new-thought">New Thought</button>
+  <button (click)="openDialog()" class="btn" id="new-thought">
+    New Thought
+  </button>
   <section class="posts">
     <app-post
       *ngFor="let object of posts"
       [post]="object"
       (deleted)="deleted($event)"
+      (submitted)="submitted($event)"
     >
     </app-post>
   </section>
 </section>
-<app-post-form (submitted)="submitted($event)"></app-post-form>
