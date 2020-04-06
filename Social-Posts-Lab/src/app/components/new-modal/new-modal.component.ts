@@ -19,14 +19,14 @@ export class NewModalComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // submitPost() {
-  //   const post = {
-  //     postTitle: this.title,
-  //     postContent: this.content,
-  //   };
-  //   this.title = '';
-  //   this.content = '';
-  //   this.submitted.emit(post);
-  //   this.dialogRef.close('What is happening');
-  // }
+  submitPost() {
+    const post = {
+      postTitle: this.title,
+      postContent: this.content,
+    };
+    this.title = '';
+    this.content = '';
+    this.submitted.emit(post);
+    this.dialogRef.close('What is happening');
+  }
 }
