@@ -23,7 +23,7 @@ export class SocialPostsComponent implements OnInit {
     const dialogRef = this.dialog.open(NewModalComponent, { width: '50%' });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
+      console.log(result);
     });
   }
 
@@ -31,7 +31,7 @@ export class SocialPostsComponent implements OnInit {
     this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
   }
 
-  submitted(post) {
+  submitted(post: Post) {
     this.posts.push(post);
   }
 }
