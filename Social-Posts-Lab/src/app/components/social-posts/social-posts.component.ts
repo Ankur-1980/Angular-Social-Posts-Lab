@@ -20,9 +20,7 @@ export class SocialPostsComponent implements OnInit {
   }
 
   deleted(post: Post) {
-    console.log(post);
-
-    // this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
+    this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
   }
 
   upVoted(post: Post) {
