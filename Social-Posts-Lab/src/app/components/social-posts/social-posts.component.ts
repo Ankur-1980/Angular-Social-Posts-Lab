@@ -11,6 +11,8 @@ import { PostFormComponent } from 'src/app/components/post-form/post-form.compon
 })
 export class SocialPostsComponent implements OnInit {
   posts: Post[];
+  post: Post;
+
   constructor(private postService: PostService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -18,7 +20,21 @@ export class SocialPostsComponent implements OnInit {
   }
 
   deleted(post: Post) {
-    this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
+    console.log(post);
+
+    // this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
+  }
+
+  upVoted(post: Post) {
+    this.posts.map((p) =>
+      p.postTitle === post.postTitle ? { ...p, votes: p.votes++ } : p
+    );
+  }
+
+  downVoted(post: Post) {
+    this.posts.map((p) =>
+      p.postTitle === post.postTitle ? { ...p, votes: p.votes-- } : p
+    );
   }
 
   openForm() {

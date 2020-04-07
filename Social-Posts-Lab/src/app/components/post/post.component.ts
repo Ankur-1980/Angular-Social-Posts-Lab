@@ -9,6 +9,8 @@ import { Post } from 'src/app/interfaces/post';
 export class PostComponent implements OnInit {
   @Input() post: Post;
   @Output() deleted: EventEmitter<Post> = new EventEmitter();
+  @Output() upVoted: EventEmitter<Post> = new EventEmitter();
+  @Output() downVoted: EventEmitter<Post> = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +18,13 @@ export class PostComponent implements OnInit {
 
   deletePost(post) {
     this.deleted.emit(post);
+  }
+
+  upVote(post) {
+    this.upVoted.emit(post);
+  }
+
+  downVote(post) {
+    this.downVoted.emit(post);
   }
 }
