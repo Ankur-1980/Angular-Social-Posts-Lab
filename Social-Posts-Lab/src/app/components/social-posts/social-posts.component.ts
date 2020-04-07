@@ -11,7 +11,6 @@ import { PostFormComponent } from 'src/app/components/post-form/post-form.compon
 })
 export class SocialPostsComponent implements OnInit {
   posts: Post[];
-  votes = 0;
   constructor(private postService: PostService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
