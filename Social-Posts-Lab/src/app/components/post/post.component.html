@@ -3,13 +3,12 @@
     <h3 class="post-title">{{ post.postTitle }}</h3>
     <span class="post-content">{{ post.postContent }}</span>
   </div>
+  <div class="votes">
+    <i class="material-icons btn-small" (click)="upVote(post)">thumb_up</i>
+    <span class="vote-display">{{ post.votes }}</span>
+    <i class="material-icons btn-small" (click)="downVote(post)">thumb_down</i>
+  </div>
   <i class="material-icons btn-small" (click)="deletePost(post)"
     >delete_forever</i
   >
 </section>
-
-<!-- <div class="votes">
-  <i class="material-icons btn-small" (click)="upVote()">thumb_up</i>
-  <span class="vote-display">{{ object.votes }}</span>
-  <i class="material-icons btn-small" (click)="downVote()">thumb_down</i>
-</div> -->

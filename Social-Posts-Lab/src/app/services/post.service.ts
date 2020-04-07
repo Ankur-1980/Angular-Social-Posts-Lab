@@ -7,21 +7,22 @@ import { Post } from '../interfaces/post';
 export class PostService {
   constructor() {}
 
-  postData: Post;
-
   getPosts() {
     return [
       {
         postTitle: 'Grand Circus',
         postContent: 'Grand Circus is cool',
+        votes: 0,
       },
       {
         postTitle: 'Ritual',
         postContent: 'Ritual is a well developed app',
+        votes: 0,
       },
       {
         postTitle: 'Scott',
         postContent: 'Scott rides scooters',
+        votes: 0,
       },
     ];
   }

@@ -6,6 +6,8 @@
       *ngFor="let object of posts"
       [post]="object"
       (deleted)="deleted($event)"
+      (upVoted)="upVoted($event)"
+      (downVoted)="downVoted($event)"
     >
     </app-post>
   </section>

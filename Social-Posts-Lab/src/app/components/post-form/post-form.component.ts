@@ -23,6 +23,7 @@ export class PostFormComponent implements OnInit {
     const post = {
       postTitle: form.value.title,
       postContent: form.value.content,
+      votes: 0,
     };
 
     this.dialogBox.close({ event: 'close', data: post });
