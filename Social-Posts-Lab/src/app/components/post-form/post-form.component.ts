@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-post-form',
@@ -11,7 +12,7 @@ export class PostFormComponent implements OnInit {
   title: string;
   content: string;
 
-  constructor() {}
+  constructor(public dialogBox: MatDialogRef<PostFormComponent>) {}
 
   ngOnInit(): void {}
 
@@ -23,5 +24,9 @@ export class PostFormComponent implements OnInit {
     this.title = '';
     this.content = '';
     this.submitted.emit(post);
+  }
+
+  cancel() {
+    this.dialogBox.close();
   }
 }

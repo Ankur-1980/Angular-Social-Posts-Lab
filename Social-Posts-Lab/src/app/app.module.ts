@@ -7,6 +7,7 @@ import { SocialPostsComponent } from './components/social-posts/social-posts.com
 import { PostComponent } from './components/post/post.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostComponent,
     PostFormComponent,
   ],
-  imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+  ],
+  entryComponents: [PostFormComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
