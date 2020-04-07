@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Post } from '../interfaces/post';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostService {
   constructor() {}
+
+  postData: Post;
 
   getPosts() {
     return [

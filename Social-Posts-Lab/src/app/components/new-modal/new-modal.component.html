@@ -1,5 +1,5 @@
 <section class="post-form">
-  <form #form="ngForm" (submit)="submitPost(form)">
+  <form #form="ngForm" (submit)="closeDialog(form)">
     <h2>Title</h2>
     <input
       type="text"
@@ -17,6 +17,6 @@
     ></textarea>
 
     <input type="submit" value="Add Post" class="btn" />
-    <button class=".btn" (click)="cancel()">Cancel</button>
+    <button (click)="cancel()">Cancel</button>
   </form>
 </section>
