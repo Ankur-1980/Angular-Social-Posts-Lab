@@ -15,8 +15,9 @@
       rows="10"
       placeholder="Expound on that thought here"
     ></textarea>
-
-    <input type="submit" value="Add Post" class="btn" />
-    <button class=".btn" (click)="cancel()">Cancel</button>
+    <div class="modal-actions">
+      <button id="submit" type="submit" class="btn">Add Post</button>
+      <button id="cancel" class="btn" (click)="cancel()">Cancel</button>
+    </div>
   </form>
 </section>

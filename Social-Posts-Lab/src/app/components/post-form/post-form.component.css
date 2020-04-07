@@ -21,4 +21,18 @@ textarea {
 .post-form .btn {
   font-weight: 600;
   font-size: 1.25rem;
+  padding: 0.5rem;
+  margin: 5px;
+}
+
+.modal-actions {
+  display: flex;
+}
+
+#submit {
+  flex: 10;
+}
+
+#cancel {
+  flex: 2;
 }
