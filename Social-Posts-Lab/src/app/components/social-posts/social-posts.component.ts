@@ -3,7 +3,6 @@ import { Post } from 'src/app/interfaces/post';
 import { PostService } from 'src/app/services/post.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PostFormComponent } from 'src/app/components/post-form/post-form.component';
-import { NewModalComponent } from 'src/app/components/new-modal/new-modal.component';
 
 @Component({
   selector: 'app-social-posts',
