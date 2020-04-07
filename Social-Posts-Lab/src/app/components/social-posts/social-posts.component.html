@@ -1,6 +1,6 @@
 <section class="container">
   <h1>My Thoughts</h1>
-  <button class="btn" id="new-thought">New Thought</button>
+  <button (click)="openForm()" class="btn" id="new-thought">New Thought</button>
   <section class="posts">
     <app-post
       *ngFor="let object of posts"
@@ -10,4 +10,3 @@
     </app-post>
   </section>
 </section>
-<app-post-form (submitted)="submitted($event)"></app-post-form>
