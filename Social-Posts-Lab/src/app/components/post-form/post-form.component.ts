@@ -19,7 +19,7 @@ export class PostFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submitPost(form: NgForm) {
+  submitPost(form: NgForm): void {
     const post = {
       postTitle: form.value.title,
       postContent: form.value.content,
@@ -29,7 +29,7 @@ export class PostFormComponent implements OnInit {
     this.dialogBox.close({ event: 'close', data: post });
   }
 
-  cancel() {
+  cancel(): void {
     this.dialogBox.close();
   }
 }

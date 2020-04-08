@@ -19,23 +19,23 @@ export class SocialPostsComponent implements OnInit {
     this.posts = this.postService.getPosts();
   }
 
-  deleted(post: Post) {
+  deleted(post: Post): any {
     this.posts = this.posts.filter((p) => p.postTitle !== post.postTitle);
   }
 
-  upVoted(post: Post) {
+  upVoted(post: Post): any {
     this.posts.map((p) =>
       p.postTitle === post.postTitle ? { ...p, votes: p.votes++ } : p
     );
   }
 
-  downVoted(post: Post) {
+  downVoted(post: Post): any {
     this.posts.map((p) =>
       p.postTitle === post.postTitle ? { ...p, votes: p.votes-- } : p
     );
   }
 
-  openForm() {
+  openForm(): any {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
@@ -46,13 +46,4 @@ export class SocialPostsComponent implements OnInit {
       this.posts.push(result.data);
     });
   }
-
-  // openNewDialog() {
-  //   const dialogRef = this.dialog.open(NewModalComponent, {
-  //     width: '250px',
-  //     backdropClass: 'custom-dialog-backdrop-class',
-  //     panelClass: 'custom-dialog-panel-class',
-  //   });
-
-  // }
 }

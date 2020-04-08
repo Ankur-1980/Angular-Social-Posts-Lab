@@ -16,15 +16,15 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deletePost(post) {
+  deletePost(post): void {
     this.deleted.emit(post);
   }
 
-  upVote(post) {
+  upVote(post): void {
     this.upVoted.emit(post);
   }
 
-  downVote(post) {
+  downVote(post): void {
     this.downVoted.emit(post);
   }
 }
